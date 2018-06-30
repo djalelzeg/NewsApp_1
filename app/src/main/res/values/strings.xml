@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsApp_1</string>
+    <string name="no_news">Sorry, unexpected problem with downloading data from Guardian\'s server.
+        Close the app and try it later. </string>
+    <string name="noInternet">No internet connection found.
+        Please check your internet connection and restart the app. </string>
+
+</resources>
