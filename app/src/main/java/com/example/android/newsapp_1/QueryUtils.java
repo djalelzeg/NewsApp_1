@@ -151,11 +151,11 @@ public class QueryUtils {
                 String date = currentNews.getString("webPublicationDate");
                 // Extract the value for the key called "webUrl"
                 String url = currentNews.getString("webUrl");
-                // Extract the value for the key called "type"
-                String type = currentNews.getString("type");
+                // Extract the value for the key called "author"
+                String tags = currentNews.getString("webTitle");
           // Create a new {@link football} object with the title, date, url,
                 // and type and section from the JSON response.
-                Football footballObject = new Football(title, date, url, type, section);
+                Football footballObject = new Football(title, date, url, tags, section );
                 // Add the new {@link football} to the list of footballs.
                 footballList.add(footballObject);
             }

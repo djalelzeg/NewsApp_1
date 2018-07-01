@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         // Append query parameter and its value. For example, the `format=geojson`
+        uriBuilder.appendQueryParameter("tags", "webTitle");
         uriBuilder.appendQueryParameter("section", "sport");
         uriBuilder.appendQueryParameter("q", "World cup");
         uriBuilder.appendQueryParameter("order-by", orderBy);
