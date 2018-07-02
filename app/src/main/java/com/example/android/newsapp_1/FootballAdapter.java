@@ -60,12 +60,10 @@ public class FootballAdapter extends ArrayAdapter<Football> {
         //Find the TextView with view ID type
         TextView tvType = (TextView) view.findViewById(R.id.type_text_view);
         tvType.setText(currentFootball.getSection());
-        TextView tvauthor = (TextView) view.findViewById(R.id.author_text_view);
-        tvauthor.setText(currentFootball.getSection());
-// return the data for all the  views
         //Find the TextView with view ID author
         TextView tvAuthor = (TextView) view.findViewById(R.id.author_text_view);
         tvAuthor.setText(currentFootball.getAuthor());
+        // return the data for all the  views
         return view;
     }
 }
