@@ -142,21 +142,23 @@ public class QueryUtils {
             for (int i = 0; i < results.length(); i++) {
 // Get a single football news at position i within the list of football news
                 JSONObject currentNews = results.getJSONObject(i);
-                // Extract the value for the key called "webtitle"
+// Extract the value for the key called "webtitle"
                 String title = currentNews.getString("webTitle");
-                // Extract the value for the key called "sectionName"
+// Extract the value for the key called "sectionName"
                 String section = currentNews.getString("sectionName");
-                // Extract the value for the key called "webpublication"
-                // Extract the value for the key called "webPublicationate"
+// Extract the value for the key called "webpublication"
+// Extract the value for the key called "webPublicationate"
                 String date = currentNews.getString("webPublicationDate");
-                // Extract the value for the key called "webUrl"
+// Extract the value for the key called "webUrl"
                 String url = currentNews.getString("webUrl");
-                // Extract the value for the key called "author"
-                String tags = currentNews.getString("webTitle");
-          // Create a new {@link football} object with the title, date, url,
-                // and type and section from the JSON response.
-                Football footballObject = new Football(title, date, url, tags, section );
-                // Add the new {@link football} to the list of footballs.
+// Extract the JSONObject associated with the key called "fields",
+                JSONObject field = currentNews.getJSONObject("fields");
+// Extract the article name for the key called "byline"
+                String author = field.getString("byline");
+// Create a new {@link football} object with the title, date, url,
+// and type and section from the JSON response.
+                Football footballObject = new Football(title, date, url, author, section );
+// Add the new {@link football} to the list of footballs.
                 footballList.add(footballObject);
             }
 
